@@ -14,6 +14,7 @@
 		2C683FC62A0DF7FC00DC69AF /* IFTTT_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FC52A0DF7FC00DC69AF /* IFTTT_challengeTests.swift */; };
 		2C683FD02A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FCF2A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift */; };
 		2C683FD22A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FD12A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift */; };
+		2C683FDF2A0EA90B00DC69AF /* applets.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C683FDE2A0EA90B00DC69AF /* applets.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2C683FCB2A0DF7FC00DC69AF /* IFTTT-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IFTTT-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C683FCF2A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTTT_challengeUITests.swift; sourceTree = "<group>"; };
 		2C683FD12A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTTT_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C683FDE2A0EA90B00DC69AF /* applets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = applets.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				2C683FB42A0DF7FB00DC69AF /* IFTTT_challengeApp.swift */,
 				2C683FB62A0DF7FB00DC69AF /* ContentView.swift */,
 				2C683FB82A0DF7FC00DC69AF /* Assets.xcassets */,
+				2C683FE02A0EA93200DC69AF /* Resources */,
 				2C683FBA2A0DF7FC00DC69AF /* Preview Content */,
 			);
 			path = "IFTTT-challenge";
@@ -125,6 +128,14 @@
 				2C683FD12A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift */,
 			);
 			path = "IFTTT-challengeUITests";
+			sourceTree = "<group>";
+		};
+		2C683FE02A0EA93200DC69AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C683FDE2A0EA90B00DC69AF /* applets.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C683FDF2A0EA90B00DC69AF /* applets.json in Resources */,
 				2C683FBC2A0DF7FC00DC69AF /* Preview Assets.xcassets in Resources */,
 				2C683FB92A0DF7FC00DC69AF /* Assets.xcassets in Resources */,
 			);
