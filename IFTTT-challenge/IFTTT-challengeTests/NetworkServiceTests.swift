@@ -32,7 +32,7 @@ final class NetworkServiceTests: XCTestCase {
         super.tearDown()
     }
     
-    func testLoadJsonResource() {
+    func testLoadJsonResourceSuccess() {
         let expectation = XCTestExpectation(description: "JSON is loaded and parsed")
         
         sut.fetch("JSON-mock", bundle: Bundle(for: type(of: self)))
@@ -54,4 +54,23 @@ final class NetworkServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
 
+    func testLoadJsonResourceFailure() {
+        let expectation = XCTestExpectation(description: "JSON load fails")
+        
+        sut.fetch("nothingFile", bundle: Bundle(for: type(of: self)))
+            .sink { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertEqual(error as! NetworkError, .invalidResourcePath)
+                    expectation.fulfill()
+                case .finished:
+                    XCTFail("Test should not receive value")
+                }
+            } receiveValue: { (users: [User]) in
+                XCTFail("Test should not receive value")
+            }
+            .store(in: &bag)
+        
+        wait(for: [expectation], timeout: 1.0)
+    }
 }
