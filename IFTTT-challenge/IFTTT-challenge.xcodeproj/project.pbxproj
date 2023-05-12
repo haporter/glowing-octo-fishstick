@@ -15,6 +15,7 @@
 		2C683FD02A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FCF2A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift */; };
 		2C683FD22A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FD12A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift */; };
 		2C683FDF2A0EA90B00DC69AF /* applets.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C683FDE2A0EA90B00DC69AF /* applets.json */; };
+		2C683FE22A0EB35E00DC69AF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FE12A0EB35E00DC69AF /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2C683FCF2A0DF7FC00DC69AF /* IFTTT_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTTT_challengeUITests.swift; sourceTree = "<group>"; };
 		2C683FD12A0DF7FC00DC69AF /* IFTTT_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFTTT_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C683FDE2A0EA90B00DC69AF /* applets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = applets.json; sourceTree = "<group>"; };
+		2C683FE12A0EB35E00DC69AF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				2C683FB82A0DF7FC00DC69AF /* Assets.xcassets */,
 				2C683FE02A0EA93200DC69AF /* Resources */,
 				2C683FBA2A0DF7FC00DC69AF /* Preview Content */,
+				2C683FE12A0EB35E00DC69AF /* NetworkService.swift */,
 			);
 			path = "IFTTT-challenge";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C683FB72A0DF7FB00DC69AF /* ContentView.swift in Sources */,
+				2C683FE22A0EB35E00DC69AF /* NetworkService.swift in Sources */,
 				2C683FB52A0DF7FB00DC69AF /* IFTTT_challengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
