@@ -14,15 +14,15 @@ enum NetworkError: Error {
 }
 
 protocol NetworkServiceType {
-    func fetch<T: Decodable>(_ resource: String) ->  AnyPublisher<T, Error>
+    func fetch<T: Decodable>(_ resource: String, bundle: Bundle) ->  AnyPublisher<T, Error>
 }
 
 struct NetworkService: NetworkServiceType {
     
-    func fetch<T>(_ resource: String) -> AnyPublisher<T, Error> where T : Decodable {
+    func fetch<T>(_ resource: String, bundle: Bundle = .main) -> AnyPublisher<T, Error> where T : Decodable {
         Future { promise in
             DispatchQueue.global().async {
-                guard let url = Bundle.main.url(forResource: resource, withExtension: "json") else {
+                guard let url = bundle.url(forResource: resource, withExtension: "json") else {
                     return promise(.failure(NetworkError.invalidResourcePath))
                 }
                 
