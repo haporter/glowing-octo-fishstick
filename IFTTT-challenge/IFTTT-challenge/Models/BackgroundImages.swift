@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct BackgroundImages: Decodable {
+    let backgroundImageURL1X: URL?
+    let backgroundImageURL2X: URL?
+    let backgroundImageURL3X: URL?
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import CoreLocation
+
+struct FenceArea: Decodable {
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+    let radius: CLLocationDistance
+}
