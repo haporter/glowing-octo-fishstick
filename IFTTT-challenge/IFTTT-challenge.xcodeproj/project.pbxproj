@@ -18,6 +18,14 @@
 		2C683FE22A0EB35E00DC69AF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FE12A0EB35E00DC69AF /* NetworkService.swift */; };
 		2C683FE42A0EBE2100DC69AF /* JSON-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C683FE32A0EBE2100DC69AF /* JSON-mock.json */; };
 		2C683FE72A0EBE6800DC69AF /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FE62A0EBE6800DC69AF /* NetworkServiceTests.swift */; };
+		2CF703322A0EFF0000E130CC /* AppletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703312A0EFF0000E130CC /* AppletService.swift */; };
+		2CF703342A0EFF8600E130CC /* Applet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703332A0EFF8600E130CC /* Applet.swift */; };
+		2CF703372A0F005300E130CC /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703362A0F005300E130CC /* Channel.swift */; };
+		2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703382A0F008D00E130CC /* BackgroundImages.swift */; };
+		2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7033A2A0F06F000E130CC /* FenceArea.swift */; };
+		2CF703412A101DB300E130CC /* JSONDecoder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703402A101DB300E130CC /* JSONDecoder+Ext.swift */; };
+		2CF703432A1064DA00E130CC /* AppletServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703422A1064DA00E130CC /* AppletServiceTests.swift */; };
+		2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703442A1142F200E130CC /* AppletListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +60,14 @@
 		2C683FE12A0EB35E00DC69AF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C683FE32A0EBE2100DC69AF /* JSON-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "JSON-mock.json"; sourceTree = "<group>"; };
 		2C683FE62A0EBE6800DC69AF /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		2CF703312A0EFF0000E130CC /* AppletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletService.swift; sourceTree = "<group>"; };
+		2CF703332A0EFF8600E130CC /* Applet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applet.swift; sourceTree = "<group>"; };
+		2CF703362A0F005300E130CC /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		2CF703382A0F008D00E130CC /* BackgroundImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImages.swift; sourceTree = "<group>"; };
+		2CF7033A2A0F06F000E130CC /* FenceArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceArea.swift; sourceTree = "<group>"; };
+		2CF703402A101DB300E130CC /* JSONDecoder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Ext.swift"; sourceTree = "<group>"; };
+		2CF703422A1064DA00E130CC /* AppletServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletServiceTests.swift; sourceTree = "<group>"; };
+		2CF703442A1142F200E130CC /* AppletListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +120,14 @@
 			children = (
 				2C683FB42A0DF7FB00DC69AF /* IFTTT_challengeApp.swift */,
 				2C683FB62A0DF7FB00DC69AF /* ContentView.swift */,
+				2CF703442A1142F200E130CC /* AppletListViewModel.swift */,
+				2CF7033F2A0F0BDD00E130CC /* Data Controllers */,
+				2CF703352A0EFF8A00E130CC /* Models */,
+				2CF703302A0EFEB300E130CC /* Utilities */,
+				2CF7033E2A0F09C800E130CC /* Extensions */,
 				2C683FB82A0DF7FC00DC69AF /* Assets.xcassets */,
 				2C683FE02A0EA93200DC69AF /* Resources */,
 				2C683FBA2A0DF7FC00DC69AF /* Preview Content */,
-				2C683FE12A0EB35E00DC69AF /* NetworkService.swift */,
 			);
 			path = "IFTTT-challenge";
 			sourceTree = "<group>";
@@ -125,6 +145,7 @@
 			children = (
 				2C683FC52A0DF7FC00DC69AF /* IFTTT_challengeTests.swift */,
 				2C683FE62A0EBE6800DC69AF /* NetworkServiceTests.swift */,
+				2CF703422A1064DA00E130CC /* AppletServiceTests.swift */,
 				2C683FE52A0EBE2600DC69AF /* Resources */,
 			);
 			path = "IFTTT-challengeTests";
@@ -153,6 +174,41 @@
 				2C683FE32A0EBE2100DC69AF /* JSON-mock.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2CF703302A0EFEB300E130CC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2C683FE12A0EB35E00DC69AF /* NetworkService.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2CF703352A0EFF8A00E130CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CF703332A0EFF8600E130CC /* Applet.swift */,
+				2CF703362A0F005300E130CC /* Channel.swift */,
+				2CF7033A2A0F06F000E130CC /* FenceArea.swift */,
+				2CF703382A0F008D00E130CC /* BackgroundImages.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2CF7033E2A0F09C800E130CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CF703402A101DB300E130CC /* JSONDecoder+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CF7033F2A0F0BDD00E130CC /* Data Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CF703312A0EFF0000E130CC /* AppletService.swift */,
+			);
+			path = "Data Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C683FB72A0DF7FB00DC69AF /* ContentView.swift in Sources */,
+				2CF703372A0F005300E130CC /* Channel.swift in Sources */,
+				2CF703342A0EFF8600E130CC /* Applet.swift in Sources */,
+				2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */,
+				2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */,
+				2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */,
+				2CF703322A0EFF0000E130CC /* AppletService.swift in Sources */,
 				2C683FE22A0EB35E00DC69AF /* NetworkService.swift in Sources */,
+				2CF703412A101DB300E130CC /* JSONDecoder+Ext.swift in Sources */,
 				2C683FB52A0DF7FB00DC69AF /* IFTTT_challengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C683FE72A0EBE6800DC69AF /* NetworkServiceTests.swift in Sources */,
+				2CF703432A1064DA00E130CC /* AppletServiceTests.swift in Sources */,
 				2C683FC62A0DF7FC00DC69AF /* IFTTT_challengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
