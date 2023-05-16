@@ -13,13 +13,16 @@ struct AppletListView: View {
     @StateObject var viewModel = AppletListViewModel()
     
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 16) {
-                ForEach(viewModel.appletPreview) { applet in
-                    view(for: applet)
+        NavigationView {
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(viewModel.appletPreview) { applet in
+                        view(for: applet)
+                    }
                 }
+                .padding(EdgeInsets(top: 0, leading: 16, bottom: 32, trailing: 16))
+                .navigationTitle("Applets")
             }
-            .padding(EdgeInsets(top: 0, leading: 16, bottom: 32, trailing: 16))
         }
     }
     

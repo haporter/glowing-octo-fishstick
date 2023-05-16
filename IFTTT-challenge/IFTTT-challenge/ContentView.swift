@@ -12,11 +12,8 @@ struct ContentView: View {
     @StateObject var viewModel: AppletListViewModel = .init()
     
     var body: some View {
-        NavigationView {
-                AppletListView()
-                .navigationTitle("Applets")
-                .edgesIgnoringSafeArea(.bottom)
-        }
+        AppletListView()
+            .edgesIgnoringSafeArea(.bottom)
     }
 }
 
