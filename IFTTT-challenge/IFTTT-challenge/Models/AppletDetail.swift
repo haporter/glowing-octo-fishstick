@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct AppletDetail: Decodable {
+    let name: String
+    let id: String
+    let author: String
+    let description: String
+    let channels: [Channel]
+    let status: AppletStatus
+}

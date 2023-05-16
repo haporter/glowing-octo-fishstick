@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct AppletPreview: Decodable {
+    let name: String
+    let author: String
+    let status: AppletStatus
+    let channels: [Channel]
+}
