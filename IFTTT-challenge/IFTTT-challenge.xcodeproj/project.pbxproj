@@ -29,6 +29,8 @@
 		2CF703472A129EF900E130CC /* AppletPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703462A129EF900E130CC /* AppletPreview.swift */; };
 		2CF703492A129F9C00E130CC /* AppletStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703482A129F9C00E130CC /* AppletStatus.swift */; };
 		2CF7034B2A133ACD00E130CC /* AppletDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7034A2A133ACD00E130CC /* AppletDetail.swift */; };
+		2CF7034E2A13443700E130CC /* AppletListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7034D2A13443700E130CC /* AppletListView.swift */; };
+		2CF703512A13463C00E130CC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2CF703502A13463C00E130CC /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,7 @@
 		2CF703462A129EF900E130CC /* AppletPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletPreview.swift; sourceTree = "<group>"; };
 		2CF703482A129F9C00E130CC /* AppletStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletStatus.swift; sourceTree = "<group>"; };
 		2CF7034A2A133ACD00E130CC /* AppletDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletDetail.swift; sourceTree = "<group>"; };
+		2CF7034D2A13443700E130CC /* AppletListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF703512A13463C00E130CC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +130,7 @@
 			children = (
 				2C683FB42A0DF7FB00DC69AF /* IFTTT_challengeApp.swift */,
 				2C683FB62A0DF7FB00DC69AF /* ContentView.swift */,
-				2CF703442A1142F200E130CC /* AppletListViewModel.swift */,
+				2CF7034C2A1343E300E130CC /* Applet List */,
 				2CF7033F2A0F0BDD00E130CC /* Data Controllers */,
 				2CF703352A0EFF8A00E130CC /* Models */,
 				2CF703302A0EFEB300E130CC /* Utilities */,
@@ -220,6 +224,15 @@
 			path = "Data Controllers";
 			sourceTree = "<group>";
 		};
+		2CF7034C2A1343E300E130CC /* Applet List */ = {
+			isa = PBXGroup;
+			children = (
+				2CF703442A1142F200E130CC /* AppletListViewModel.swift */,
+				2CF7034D2A13443700E130CC /* AppletListView.swift */,
+			);
+			path = "Applet List";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +249,9 @@
 			dependencies = (
 			);
 			name = "IFTTT-challenge";
+			packageProductDependencies = (
+				2CF703502A13463C00E130CC /* Kingfisher */,
+			);
 			productName = "IFTTT-challenge";
 			productReference = 2C683FB12A0DF7FB00DC69AF /* IFTTT-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -308,6 +324,9 @@
 				Base,
 			);
 			mainGroup = 2C683FA82A0DF7FB00DC69AF;
+			packageReferences = (
+				2CF7034F2A13463C00E130CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2C683FB22A0DF7FB00DC69AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +377,7 @@
 				2CF703342A0EFF8600E130CC /* DTOApplet.swift in Sources */,
 				2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */,
 				2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */,
+				2CF7034E2A13443700E130CC /* AppletListView.swift in Sources */,
 				2CF703472A129EF900E130CC /* AppletPreview.swift in Sources */,
 				2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */,
 				2CF703492A129F9C00E130CC /* AppletStatus.swift in Sources */,
@@ -691,6 +711,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CF7034F2A13463C00E130CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CF703502A13463C00E130CC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CF7034F2A13463C00E130CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C683FA92A0DF7FB00DC69AF /* Project object */;
 }
