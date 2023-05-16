@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel: AppletListViewModel = .init()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+                AppletListView()
+                .navigationTitle("Applets")
+                .edgesIgnoringSafeArea(.bottom)
         }
-        .padding()
     }
 }
 

@@ -13,7 +13,7 @@ protocol JSONDecoderType {
 }
 
 protocol AppletServiceType {
-    func fetchApplets() -> AnyPublisher<[DTOApplet], Error>
+    func fetchApplets() -> AnyPublisher<[AppletPreview], Error>
 }
 
 struct AppletService: AppletServiceType {
@@ -34,9 +34,13 @@ struct AppletService: AppletServiceType {
             .share()
     }
     
-    func fetchApplets() -> AnyPublisher<[DTOApplet], Error> {
+    func fetchApplets() -> AnyPublisher<[AppletPreview], Error> {
         liveApplets
             .map(\.liveApplets)
+            .map({ dtoApplets in
+                dtoApplets
+                    .map(AppletPreview.init(dtoApplet: ))
+            })
             .eraseToAnyPublisher()
     }
 }

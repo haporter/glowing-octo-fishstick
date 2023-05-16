@@ -18,23 +18,27 @@ class AppletListViewModel: ObservableObject {
     
     init(appletService: AppletServiceType = AppletService()) {
         self.appletService = appletService
+        
+        subscribe()
     }
     
-    func fetchApplets() {
+    private func subscribe() {
+        fetchApplets()
+            .assign(to: &$appletPreview)
+    }
+    
+    private func fetchApplets() -> some Publisher<[AppletPreview], Never> {
         appletService
             .fetchApplets()
+            .catch({ _ in
+                //TODO: - handle error
+                Empty(outputType: [AppletPreview].self, failureType: Never.self)
+            })
             .receive(on: RunLoop.main)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    debugPrint(error)
-                case .finished:
-                    break
-                }
-            } receiveValue: { applets in
-                debugPrint(applets.map(\.status.prettyName))
-                debugPrint("Applets:", applets.count)
-            }
-            .store(in: &bag)
+            
+    }
+    
+    func channelIcons(for applet: AppletPreview) -> [URL] {
+        applet.channels.map(\.monochromeImageUrl)
     }
 }
