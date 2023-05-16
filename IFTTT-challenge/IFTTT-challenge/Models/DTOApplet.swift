@@ -1,5 +1,5 @@
 //
-//  Applet.swift
+//  DTOApplet.swift
 //  IFTTT-challenge
 //
 //  Created by Andrew Porter on 5/12/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Applet: Decodable {
+struct DTOApplet: Decodable {
     let createdAt: Date
     let id: String
     let serviceSlug: String
@@ -15,7 +15,7 @@ struct Applet: Decodable {
     let name: String
     let description: String
     let brandColor: String
-    let status: String
+    let status: AppletStatus
     let author: String
     let installsCount: Int
     let appletFeedbackByUser: Bool?

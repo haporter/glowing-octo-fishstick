@@ -19,13 +19,16 @@
 		2C683FE42A0EBE2100DC69AF /* JSON-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C683FE32A0EBE2100DC69AF /* JSON-mock.json */; };
 		2C683FE72A0EBE6800DC69AF /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C683FE62A0EBE6800DC69AF /* NetworkServiceTests.swift */; };
 		2CF703322A0EFF0000E130CC /* AppletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703312A0EFF0000E130CC /* AppletService.swift */; };
-		2CF703342A0EFF8600E130CC /* Applet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703332A0EFF8600E130CC /* Applet.swift */; };
+		2CF703342A0EFF8600E130CC /* DTOApplet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703332A0EFF8600E130CC /* DTOApplet.swift */; };
 		2CF703372A0F005300E130CC /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703362A0F005300E130CC /* Channel.swift */; };
 		2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703382A0F008D00E130CC /* BackgroundImages.swift */; };
 		2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7033A2A0F06F000E130CC /* FenceArea.swift */; };
 		2CF703412A101DB300E130CC /* JSONDecoder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703402A101DB300E130CC /* JSONDecoder+Ext.swift */; };
 		2CF703432A1064DA00E130CC /* AppletServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703422A1064DA00E130CC /* AppletServiceTests.swift */; };
 		2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703442A1142F200E130CC /* AppletListViewModel.swift */; };
+		2CF703472A129EF900E130CC /* AppletPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703462A129EF900E130CC /* AppletPreview.swift */; };
+		2CF703492A129F9C00E130CC /* AppletStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703482A129F9C00E130CC /* AppletStatus.swift */; };
+		2CF7034B2A133ACD00E130CC /* AppletDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7034A2A133ACD00E130CC /* AppletDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +64,16 @@
 		2C683FE32A0EBE2100DC69AF /* JSON-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "JSON-mock.json"; sourceTree = "<group>"; };
 		2C683FE62A0EBE6800DC69AF /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		2CF703312A0EFF0000E130CC /* AppletService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletService.swift; sourceTree = "<group>"; };
-		2CF703332A0EFF8600E130CC /* Applet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applet.swift; sourceTree = "<group>"; };
+		2CF703332A0EFF8600E130CC /* DTOApplet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOApplet.swift; sourceTree = "<group>"; };
 		2CF703362A0F005300E130CC /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		2CF703382A0F008D00E130CC /* BackgroundImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImages.swift; sourceTree = "<group>"; };
 		2CF7033A2A0F06F000E130CC /* FenceArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceArea.swift; sourceTree = "<group>"; };
 		2CF703402A101DB300E130CC /* JSONDecoder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Ext.swift"; sourceTree = "<group>"; };
 		2CF703422A1064DA00E130CC /* AppletServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletServiceTests.swift; sourceTree = "<group>"; };
 		2CF703442A1142F200E130CC /* AppletListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletListViewModel.swift; sourceTree = "<group>"; };
+		2CF703462A129EF900E130CC /* AppletPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletPreview.swift; sourceTree = "<group>"; };
+		2CF703482A129F9C00E130CC /* AppletStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletStatus.swift; sourceTree = "<group>"; };
+		2CF7034A2A133ACD00E130CC /* AppletDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +193,13 @@
 		2CF703352A0EFF8A00E130CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CF703332A0EFF8600E130CC /* Applet.swift */,
+				2CF703332A0EFF8600E130CC /* DTOApplet.swift */,
 				2CF703362A0F005300E130CC /* Channel.swift */,
 				2CF7033A2A0F06F000E130CC /* FenceArea.swift */,
 				2CF703382A0F008D00E130CC /* BackgroundImages.swift */,
+				2CF703482A129F9C00E130CC /* AppletStatus.swift */,
+				2CF703462A129EF900E130CC /* AppletPreview.swift */,
+				2CF7034A2A133ACD00E130CC /* AppletDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,10 +354,13 @@
 			files = (
 				2C683FB72A0DF7FB00DC69AF /* ContentView.swift in Sources */,
 				2CF703372A0F005300E130CC /* Channel.swift in Sources */,
-				2CF703342A0EFF8600E130CC /* Applet.swift in Sources */,
+				2CF7034B2A133ACD00E130CC /* AppletDetail.swift in Sources */,
+				2CF703342A0EFF8600E130CC /* DTOApplet.swift in Sources */,
 				2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */,
 				2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */,
+				2CF703472A129EF900E130CC /* AppletPreview.swift in Sources */,
 				2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */,
+				2CF703492A129F9C00E130CC /* AppletStatus.swift in Sources */,
 				2CF703322A0EFF0000E130CC /* AppletService.swift in Sources */,
 				2C683FE22A0EB35E00DC69AF /* NetworkService.swift in Sources */,
 				2CF703412A101DB300E130CC /* JSONDecoder+Ext.swift in Sources */,
