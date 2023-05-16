@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum AppletStatus: String, Decodable {
     case enabled = "enabled_for_user"
@@ -20,6 +21,17 @@ enum AppletStatus: String, Decodable {
             return "Off"
         case .neverEnabled:
             return "Disconnected"
+        }
+    }
+    
+    var color: Color {
+        switch self {
+        case .enabled:
+            return .mint
+        case .disabled:
+            return .gray
+        case .neverEnabled:
+            return .black
         }
     }
 }

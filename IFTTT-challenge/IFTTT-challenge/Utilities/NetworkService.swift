@@ -14,12 +14,12 @@ enum NetworkError: Error {
 }
 
 protocol NetworkServiceType {
-    func fetch<T: Decodable>(_ resource: String, bundle: Bundle) ->  AnyPublisher<T, Error>
+    func fetch<T: Decodable>(_ resource: String, decoder: JSONDecoderType, bundle: Bundle) ->  AnyPublisher<T, Error>
 }
 
 struct NetworkService: NetworkServiceType {
     
-    func fetch<T>(_ resource: String, bundle: Bundle = .main) -> AnyPublisher<T, Error> where T : Decodable {
+    func fetch<T>(_ resource: String, decoder: JSONDecoderType, bundle: Bundle = .main) -> AnyPublisher<T, Error> where T : Decodable {
         Future { promise in
             DispatchQueue.global().async {
                 guard let url = bundle.url(forResource: resource, withExtension: "json") else {
@@ -30,7 +30,6 @@ struct NetworkService: NetworkServiceType {
                     return promise(.failure(NetworkError.fileLoadError))
                 }
                 
-                let decoder = JSONDecoder()
                 do {
                     let loaded = try decoder.decode(T.self, from: data)
                     promise(.success(loaded))
