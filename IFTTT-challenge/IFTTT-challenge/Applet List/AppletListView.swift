@@ -17,7 +17,9 @@ struct AppletListView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.appletPreview) { applet in
-                        view(for: applet)
+                        NavigationLink(destination: AppletDetailView(viewModel: .init(id: applet.id))) {
+                            view(for: applet)
+                        }
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 32, trailing: 16))
@@ -52,6 +54,7 @@ struct AppletListView: View {
             Text(applet.name)
                 .font(.headline)
                 .foregroundColor(.white)
+                .multilineTextAlignment(.leading)
                 .padding(.bottom, 8)
             Text(applet.author)
                 .font(.callout)
