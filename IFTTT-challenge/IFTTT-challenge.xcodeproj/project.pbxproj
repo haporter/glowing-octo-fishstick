@@ -32,6 +32,8 @@
 		2CF7034E2A13443700E130CC /* AppletListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF7034D2A13443700E130CC /* AppletListView.swift */; };
 		2CF703512A13463C00E130CC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2CF703502A13463C00E130CC /* Kingfisher */; };
 		2CF703532A134FA100E130CC /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703522A134FA100E130CC /* Color+Ext.swift */; };
+		2CF703552A147C9000E130CC /* AppletDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703542A147C9000E130CC /* AppletDetailView.swift */; };
+		2CF703572A147EA900E130CC /* AppletDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF703562A147EA900E130CC /* AppletDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		2CF7034A2A133ACD00E130CC /* AppletDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletDetail.swift; sourceTree = "<group>"; };
 		2CF7034D2A13443700E130CC /* AppletListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletListView.swift; sourceTree = "<group>"; };
 		2CF703522A134FA100E130CC /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		2CF703542A147C9000E130CC /* AppletDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletDetailView.swift; sourceTree = "<group>"; };
+		2CF703562A147EA900E130CC /* AppletDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppletDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,8 @@
 			children = (
 				2CF703442A1142F200E130CC /* AppletListViewModel.swift */,
 				2CF7034D2A13443700E130CC /* AppletListView.swift */,
+				2CF703542A147C9000E130CC /* AppletDetailView.swift */,
+				2CF703562A147EA900E130CC /* AppletDetailViewModel.swift */,
 			);
 			path = "Applet List";
 			sourceTree = "<group>";
@@ -379,8 +385,10 @@
 				2CF7034B2A133ACD00E130CC /* AppletDetail.swift in Sources */,
 				2CF703342A0EFF8600E130CC /* DTOApplet.swift in Sources */,
 				2CF703392A0F008D00E130CC /* BackgroundImages.swift in Sources */,
+				2CF703552A147C9000E130CC /* AppletDetailView.swift in Sources */,
 				2CF703452A1142F200E130CC /* AppletListViewModel.swift in Sources */,
 				2CF7034E2A13443700E130CC /* AppletListView.swift in Sources */,
+				2CF703572A147EA900E130CC /* AppletDetailViewModel.swift in Sources */,
 				2CF703472A129EF900E130CC /* AppletPreview.swift in Sources */,
 				2CF7033B2A0F06F000E130CC /* FenceArea.swift in Sources */,
 				2CF703492A129F9C00E130CC /* AppletStatus.swift in Sources */,
