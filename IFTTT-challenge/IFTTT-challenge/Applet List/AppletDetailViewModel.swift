@@ -20,16 +20,6 @@ class AppletDetailViewModel: ObservableObject {
     init(id: String, service: AppletServiceType = AppletService()) {
         self.id = id
         self.appletService = service
-        
-        subscribe()
-    }
-    
-    func subscribe() {
-        $applet
-            .sink { value in
-                debugPrint(value)
-            }
-            .store(in: &bag)
     }
     
     func fetchAppletDetail() /*-> some Publisher<AppletDetail?, Never>*/ {
