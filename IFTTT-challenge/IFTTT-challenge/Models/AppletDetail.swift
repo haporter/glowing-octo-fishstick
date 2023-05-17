@@ -14,4 +14,13 @@ struct AppletDetail: Decodable {
     let description: String
     let channels: [Channel]
     let status: AppletStatus
+    
+    init(dtoApplet: DTOApplet) {
+        self.name = dtoApplet.name
+        self.id = dtoApplet.id
+        self.author = dtoApplet.author
+        self.description = dtoApplet.description
+        self.channels = dtoApplet.channels
+        self.status = dtoApplet.status
+    }
 }
