@@ -18,16 +18,19 @@ struct User: Decodable {
 final class NetworkServiceTests: XCTestCase {
     
     var bag: Set<AnyCancellable>!
+    var decoder: JSONDecoderType!
     var sut: NetworkService!
     
     override func setUp() {
         super.setUp()
         bag = []
+        decoder = JSONDecoder()
         sut = NetworkService()
     }
     
     override func tearDown() {
         bag = nil
+        decoder = nil
         sut = nil
         super.tearDown()
     }
@@ -35,7 +38,7 @@ final class NetworkServiceTests: XCTestCase {
     func testLoadJsonResourceSuccess() {
         let expectation = XCTestExpectation(description: "JSON is loaded and parsed")
         
-        sut.fetch("JSON-mock", bundle: Bundle(for: type(of: self)))
+        sut.fetch("JSON-mock", decoder: decoder, bundle: Bundle(for: type(of: self)))
             .sink { completion in
                 switch completion {
                 case .failure(let error):
@@ -57,7 +60,7 @@ final class NetworkServiceTests: XCTestCase {
     func testLoadJsonResourceFailure() {
         let expectation = XCTestExpectation(description: "JSON load fails")
         
-        sut.fetch("nothingFile", bundle: Bundle(for: type(of: self)))
+        sut.fetch("nothingFile", decoder: decoder, bundle: Bundle(for: type(of: self)))
             .sink { completion in
                 switch completion {
                 case .failure(let error):
