@@ -31,7 +31,7 @@ class AppletListViewModel: ObservableObject {
         appletService
             .fetchApplets()
             .catch({ _ in
-                //TODO: - handle error
+                // TODO: handle error
                 Empty(outputType: [AppletPreview].self, failureType: Never.self)
             })
             .receive(on: RunLoop.main)

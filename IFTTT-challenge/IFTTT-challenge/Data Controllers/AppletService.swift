@@ -14,6 +14,7 @@ protocol JSONDecoderType {
 
 protocol AppletServiceType {
     func fetchApplets() -> AnyPublisher<[AppletPreview], Error>
+    func fetchApplet(with id: String) -> AnyPublisher<AppletDetail?, Error>
 }
 
 struct AppletService: AppletServiceType {
@@ -41,6 +42,17 @@ struct AppletService: AppletServiceType {
                 dtoApplets
                     .map(AppletPreview.init(dtoApplet: ))
             })
+            .eraseToAnyPublisher()
+    }
+    
+    func fetchApplet(with id: String) -> AnyPublisher<AppletDetail?, Error> {
+        liveApplets
+            .map(\.liveApplets)
+            .map { applets in
+                applets
+                    .first(where: { $0.id == id })
+                    .map { AppletDetail(dtoApplet: $0)}
+            }
             .eraseToAnyPublisher()
     }
 }
